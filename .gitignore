@@ -1,3 +1,15 @@
-.idea
-.DS_Store
-/target/
+# Ignore IDE and system files  
+*.idea
+*.DS_Store
+
+# Ignore build and compiled files  
+*target/
+
+# Ignore environment and configuration files  
+*.env 
+
+# Ignore data directories
+*data/
+
+# Ignore output directories
+*output

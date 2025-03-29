@@ -53,7 +53,8 @@ public class Challenge {
         }
     }
 
-    private void readItemQuantityPairs(BufferedReader reader, int nLines, List<Map<Integer, Integer>> orders) throws IOException {
+    private void readItemQuantityPairs(BufferedReader reader, int nLines, List<Map<Integer, Integer>> orders)
+            throws IOException {
         String line;
         for (int orderIndex = 0; orderIndex < nLines; orderIndex++) {
             line = reader.readLine();
@@ -111,12 +112,6 @@ public class Challenge {
     public static void main(String[] args) {
         // Start the stopwatch to track the running time
         StopWatch stopWatch = StopWatch.createStarted();
-
-        if (args.length != 2) {
-            System.out.println("Usage: java -jar target/ChallengeSBPO2025-1.0.jar <inputFilePath> <outputFilePath>");
-            return;
-        }
-
         Challenge challenge = new Challenge();
         challenge.readInput(args[0]);
         var challengeSolver = new ChallengeSolver(
